@@ -1,0 +1,28 @@
+Bootstrap: docker
+From: archlinux
+
+%help
+This is a Singularity image definition file for mapp-core for Arch Linux.
+
+%post
+    set -e
+    pacman -Syu --noconfirm
+    pacman -Syu --noconfirm git gcc cmake make python3 boost gtest gmock autoconf autogen automake libtool gcovr
+
+%post
+    git clone https://github.com/linux-test-project/lcov.git
+    cd lcov
+    make install
+
+%post
+    git clone https://github.com/google/benchmark.git
+    git clone https://github.com/google/googletest.git benchmark/googletest
+    cd benchmark
+    cmake -E make_directory "build"
+    cmake -E chdir "build" cmake -DCMAKE_BUILD_TYPE=Release ../
+    cmake --build "build" --config Release
+    cmake --build "build" --config Release --target install
+
+%post
+	git clone https://github.com/protocolbuffers/protobuf.git
+	cd protobuf && git checkout tags/v3.17.3 && git submodule update --init --recursive && chmod u+x autogen.sh && ./autogen.sh && ./configure && make -j4 && make install && ldconfig

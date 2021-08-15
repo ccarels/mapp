@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+package mapp;
+
+message unit_info {
+  optional int32 _id = 1;
+  optional int32 _total_in_sequence = 2;
+}
+
+message database_info {
+  optional bool _is_database = 1;
+}
+
+message persistency_info {
+  optional bool _is_persistent = 1;
+  optional string _persistent_path = 2;
+  optional string _format = 3;
+  optional database_info _database_info = 4;
+}
+
+message run_metadata {
+  optional string _url = 1;
+  optional unit_info _unit_info = 2;
+  optional persistency_info _persistent_info = 3;
+  optional bool _should_copy_from_remote = 4;
+}

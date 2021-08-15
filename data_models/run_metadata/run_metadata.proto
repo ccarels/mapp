@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package mapp;
+
+message io_metadata {
+  optional string path = 1;
+  optional string description = 2;
+}
+
+message run_metadata {
+  optional int32 id = 1;
+  optional int32 seq = 2;
+  optional string name = 3;
+  optional string description = 4;
+  optional int64 datetime_start_utc = 5;
+  optional int64 datetime_start_local = 6;
+  optional string host_name = 7;
+  optional string user_id = 8;
+  optional string os_type = 9;
+  optional string workdir = 10;
+  optional string script = 11;
+  repeated io_metadata io_data = 12;
+}

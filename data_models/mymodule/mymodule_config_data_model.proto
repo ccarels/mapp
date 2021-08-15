@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+package mapp;
+
+message mymodule_config {
+  optional int32 param = 1;
+}

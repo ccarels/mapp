@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package mapp;
+
+message pymodule_template_config {
+  optional string script_path = 1;
+}

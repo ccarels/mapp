@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exec-core-test
+spec:
+  containers:
+    - name: exec-core-test
+      image: exec-core-test:latest
+      imagePullPolicy: Never

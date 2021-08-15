@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package mapp;
+
+// See cudaGetDeviceProperties
+message cuda_device_properties {
+  optional int32 number = 1;
+  optional string name = 2;
+  optional int32 memory_clock_rate = 3;
+  optional int32 memory_bus_width = 4;
+  optional int32 total_memory = 5;
+  optional int32 compute_capability_major = 6;
+  optional int32 compute_capability_minor = 7;
+}
+
+message cuda_devices_info {
+  optional int32 device_count = 1;
+  repeated cuda_device_properties device_infos = 2;
+}

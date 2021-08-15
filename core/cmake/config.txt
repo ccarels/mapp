@@ -1,0 +1,5 @@
+mymodule @MODULES_DIR@/mymodule/build/libmymodule.@LIB_EXT@
+pymodule_template @CMAKE_BINARY_DIR@/libpymodule_template.@LIB_EXT@
+null_algorithm @CMAKE_BINARY_DIR@/libnull_algorithm.@LIB_EXT@
+non_compliant_algorithm @CMAKE_BINARY_DIR@/libnon_compliant_algorithm.@LIB_EXT@
+throwing_algorithm @CMAKE_BINARY_DIR@/libthrowing_algorithm.@LIB_EXT@
