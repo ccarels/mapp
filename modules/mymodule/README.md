@@ -72,7 +72,7 @@ To compile and run the benchmarks
 
     cd tests/benchmarks && mkdir -p build && cd build/
     cmake -DMAPP_CORE_PATH=/absolute/path/to/mapp/core -DMAPP_DATA_MODELS_PATH=/absolute/path/to/data_models/ -DMYMODULE_CONFIG_DATA_MODEL_LIB=/absolute/path/to/data_models/mymodule/build/libmymodule_config_data_model.so -DMYMODULE_LIB=/absolute/path/to/modules/mymodule/build/libmymodule.so ../ && make
-    ./test_benchmark_mapp_core
+    ./test_benchmark
 
 The absolute paths shown above should be substituted with those on your own system.
 The aforementioned CMake variables can also be set as environment variables instead.

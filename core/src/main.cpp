@@ -58,12 +58,13 @@ auto main() -> int {
   pipeline.put_module_init(null_module_ptr, "", svc_locator);
   pipeline.put_module_exec(null_module_ptr, "", svc_locator);
 
-  auto pymodule = provide.get("pymodule_template");
-  svc_locator->_svc_fs->register_loader(pymodule);
-  auto pyptr = pymodule->instance();
+  // Uncomment these lines to run a Python module
+  //auto pymodule = provide.get("pymodule_template");
+  //svc_locator->_svc_fs->register_loader(pymodule);
+  //auto pyptr = pymodule->instance();
 
-  pipeline.put_module_init(pyptr, "/pymodule_template/config", svc_locator);
-  pipeline.put_module_exec(pyptr, "", svc_locator);
+  //pipeline.put_module_init(pyptr, "/pymodule_template/config", svc_locator);
+  //pipeline.put_module_exec(pyptr, "", svc_locator);
 
   /// Run two pipelines on separate threads
   // Py_Initialize();
