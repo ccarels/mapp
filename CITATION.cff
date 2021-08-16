@@ -1,14 +1,13 @@
-# YAML 1.2
+cff-version: "1.1.0"
+message: "If you use this software, please cite it using these metadata."
 authors: 
   - family-names: Carels
     given-names: Cees
     orcid: "https://orcid.org/0000-0002-8167-5717"
-cff-version: "1.1.0"
+title: "mapp - Modular Analysis Pipeline Processor"
 date-released: 2021
 keywords: 
   - "c++"
   - "data processing pipelines"
 license: "BSD-3-Clause"
-message: "If you use this software, please cite it using these metadata."
 repository-code: "https://github.com/ccarels/mapp"
-title: "mapp - Modular Analysis Pipeline Processor"
